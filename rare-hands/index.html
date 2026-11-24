@@ -3,14 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rare Hands</title>
-<link rel="stylesheet" href="style.css">
+<title>Rare Hands: Hong Kong Mahjong</title>
+<meta name="description" content="Rare Hands is a Hong Kong mahjong puzzle for one: trace tiles, chase rare hands. Free sparrow stickers to save and share.">
+<meta name="theme-color" content="#8f0d13">
+<meta property="og:title" content="Rare Hands: Hong Kong Mahjong">
+<meta property="og:description" content="Trace tiles. Chase rare hands. Plus free sparrow stickers.">
+<meta property="og:image" content="https://fkllfkll.github.io/rare-hands/stickers/hug.png">
+<link rel="stylesheet" href="home.css">
 </head>
 <body>
+
+<header class="top">
+  <span>RARE HANDS · 港式麻雀牌型大師</span>
+  <nav aria-label="Page">
+    <a href="#stickers" data-zh="貼圖">Stickers</a>
+    <a href="#game" data-zh="點玩">The game</a>
+    <a href="#watch" data-zh="短片">Watch</a>
+    <button class="lang" type="button" id="lang" aria-label="切換到中文">中文</button>
+  </nav>
+</header>
+
 <main>
-<h1>Rare Hands: Hong Kong Mahjong</h1>
-<p>Trace tiles. Chase rare hands.</p>
-<p><a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a></p>
+<section class="pad wrap" aria-labelledby="title">
+  <div class="pad-head"><span data-zh="每日一局">Daily game</span><span id="monthYear"></span></div>
+  <div class="sheet-top">
+    <div class="date" aria-hidden="true">
+      <div class="date-month" id="month">麻雀</div>
+      <div class="date-day" id="day">中</div>
+      <div class="date-week" id="week">RARE HANDS</div>
+    </div>
+    <div class="pitch">
+      <h1 id="title"><span class="zh-line" lang="zh-Hant">一筆<em>食糊</em>。</span><span data-zh="">Trace tiles, chase rare hands.</span></h1>
+      <p class="lead" data-zh="每日一局新牌陣，人人同一副牌。唔使麻雀枱，一缺三都照開枱。">A new mahjong puzzle every day, the same board for everyone. No table, no three friends needed.</p>
+      <span class="get" id="get" aria-disabled="true" data-zh="即將登陸 App Store">Coming soon to the App Store</span>
+      <span class="get-note" data-zh="iPhone 同 iPad">iPhone and iPad</span>
+      <img class="pitch-bird" src="stickers/thumb/point.webp" alt="" width="300" height="300">
+    </div>
+  </div>
+  <div class="almanac">
+    <div><b lang="zh-Hant">宜</b><span id="good" data-zh="對對糊 · 一筆過 · 傳貼圖俾阿媽">All Pungs · one clean stroke · sending mum a sticker</span></div>
+    <div><b lang="zh-Hant">忌</b><span id="bad" data-zh="詐糊 · 一缺三">False wins · being three players short</span></div>
+  </div>
+</section>
+
+<section class="wall wrap" id="stickers" aria-labelledby="stickers-title">
+  <h2 id="stickers-title" data-zh="撕一張，傳出去">Tear one off</h2>
+  <p data-zh="每張貼圖都係一頁日曆，撳「儲存」就攞得走，免費。新貼圖跟住短片陸續有。">Every sticker is a page off the calendar. Tap Save to keep it, free. New ones arrive with the reels.</p>
+  <ul class="sheets">
+    <li class="sticker"><div class="sticker-no">1<span data-zh="宜攬攬">Good for hugs</span></div>
+      <img src="stickers/thumb/hug.webp" alt="Two sparrows hugging cheek to cheek" width="300" height="300" loading="lazy">
+      <h3 data-zh="攬攬">Hug</h3>
+      <div class="sticker-save"><a href="stickers/hug.png" download="rare-hands-hug.png" data-zh="儲存">Save</a><a href="stickers/hug-animated.webp" download="rare-hands-hug-animated.webp" data-zh="動態版">Animated</a></div></li>
+    <li class="sticker"><div class="sticker-no">2<span data-zh="宜食糊">Good for winning</span></div>
+      <img src="stickers/thumb/cheer.webp" alt="The sparrow cheering with both wings up" width="300" height="300" loading="lazy">
+      <h3 data-zh="食糊！">I won!</h3>
+      <div class="sticker-save"><a href="stickers/cheer.png" download="rare-hands-i-won.png" data-zh="儲存">Save</a></div></li>
+    <li class="sticker"><div class="sticker-no">3<span data-zh="宜諗清楚">Good for thinking</span></div>
+      <img src="stickers/thumb/think.webp" alt="The sparrow thinking, wing on chin" width="300" height="300" loading="lazy">
+      <h3 data-zh="諗緊……">Thinking…</h3>
+      <div class="sticker-save"><a href="stickers/think.png" download="rare-hands-thinking.png" data-zh="儲存">Save</a></div></li>
+    <li class="sticker"><div class="sticker-no">4<span data-zh="忌詐糊">Avoid false wins</span></div>
+      <img src="stickers/thumb/sad.webp" alt="The sparrow looking sad" width="300" height="300" loading="lazy">
+      <h3 data-zh="詐糊……">Oh no</h3>
+      <div class="sticker-save"><a href="stickers/sad.png" download="rare-hands-oh-no.png" data-zh="儲存">Save</a></div></li>
+    <li class="sticker"><div class="sticker-no">5<span data-zh="宜打招呼">Good for hellos</span></div>
+      <img src="stickers/thumb/wave.webp" alt="The sparrow waving" width="300" height="300" loading="lazy">
+      <h3 data-zh="喂！">Hi!</h3>
+      <div class="sticker-save"><a href="stickers/wave.png" download="rare-hands-hi.png" data-zh="儲存">Save</a></div></li>
+    <li class="sticker"><div class="sticker-no">6<span data-zh="宜睇清楚">Good for pointing</span></div>
+      <img src="stickers/thumb/point.webp" alt="The sparrow pointing to one side" width="300" height="300" loading="lazy">
+      <h3 data-zh="睇呢度">Look here</h3>
+      <div class="sticker-save"><a href="stickers/point.png" download="rare-hands-look-here.png" data-zh="儲存">Save</a></div></li>
+    <li class="sticker"><div class="sticker-no">7<span data-zh="宜早瞓">Good for sleep</span></div>
+      <img src="stickers/thumb/sleep.webp" alt="The sparrow asleep" width="300" height="300" loading="lazy">
+      <h3 data-zh="瞓喇">Good night</h3>
+      <div class="sticker-save"><a href="stickers/sleep.png" download="rare-hands-good-night.png" data-zh="儲存">Save</a></div></li>
+  </ul>
+</section>
+
+<section class="wall wrap play" id="game" aria-labelledby="game-title">
+  <div>
+    <h2 id="game-title" data-zh="一隻手指打麻雀">Mahjong with one finger</h2>
+    <ol class="steps">
+      <li data-zh="手指劃過相連嘅牌。">Drag your finger through neighbouring tiles.</li>
+      <li data-zh="砌出刻子、順子，再加一對眼。">Build sets of three, plus one pair.</li>
+      <li data-zh="牌型越罕有，分數越高。">The rarer the hand, the higher the score.</li>
+    </ol>
+  </div>
+  <div class="shots">
+    <img src="img/trace-en.jpg" data-src-zh="img/trace-zh.jpg" alt="The board with a line traced through six tiles" width="660" height="1434" loading="lazy">
+    <img src="img/score-en.jpg" data-src-zh="img/score-zh.jpg" alt="The score plate after a hand" width="660" height="1434" loading="lazy">
+  </div>
+</section>
+
+<section class="wall wrap" id="watch" aria-labelledby="watch-title">
+  <h2 id="watch-title" data-zh="睇短片，學牌型">Watch and learn the hands</h2>
+  <ul class="channels">
+    <li><a href="https://www.youtube.com/@rarehandhkmahjong" rel="noopener"><strong>YouTube</strong><span data-zh="英文教學短片">Lessons in English</span></a></li>
+    <li><a href="https://www.instagram.com/rarehandhkmahjong/" rel="noopener"><strong>Instagram</strong><span data-zh="廣東話短片">Reels in Cantonese</span></a></li>
+    <li><a href="https://www.facebook.com/rarehandhkmahjong" rel="noopener"><strong>Facebook</strong><span data-zh="廣東話短片">Reels in Cantonese</span></a></li>
+  </ul>
+</section>
 </main>
+
+<footer>
+  <span>Rare Hands: Hong Kong Mahjong · 港式麻雀牌型大師</span>
+  <nav aria-label="Help"><a href="support.html" data-zh="支援">Support</a><a href="privacy.html" data-zh="私隱政策">Privacy policy</a></nav>
+</footer>
+
+<script>
+(function () {
+  // Set this once the game is live; the button then becomes a link.
+  var APP_STORE_URL = "";
+  var GOOD = [["All Pungs", "對對糊"], ["one clean stroke", "一筆過"], ["sending mum a sticker", "傳貼圖俾阿媽"], ["All Chows", "平糊"], ["Small Three Dragons", "小三元"], ["All Honors", "字一色"], ["a quick game on the bus", "搭車打返局"]];
+  var BAD = [["False wins", "詐糊"], ["being three players short", "一缺三"], ["shaky fingers", "手震"], ["greed", "貪心"], ["lifting your finger too early", "太早鬆手"]];
+  var WEEK_ZH = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+  var MONTH_ZH = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+  var now = new Date(), dayNo = Math.floor(now.getTime() / 864e5), lang = "en";
+  var $ = function (id) { return document.getElementById(id); };
+  function pick(list, n, seed) { var out = []; for (var i = 0; i < n; i++) out.push(list[(seed + i * 3) % list.length]); return out; }
+
+  // Remember each element's English text once, then swap by language.
+  var nodes = [].slice.call(document.querySelectorAll("[data-zh]"));
+  nodes.forEach(function (el) { el.setAttribute("data-en", el.textContent); });
+  var shots = [].slice.call(document.querySelectorAll("[data-src-zh]"));
+  shots.forEach(function (el) { el.setAttribute("data-src-en", el.getAttribute("src")); });
+
+  function render() {
+    var zh = lang === "zh", i = zh ? 1 : 0;
+    document.documentElement.lang = zh ? "zh-Hant" : "en";
+    nodes.forEach(function (el) { el.textContent = el.getAttribute(zh ? "data-zh" : "data-en"); });
+    shots.forEach(function (el) { el.src = el.getAttribute(zh ? "data-src-zh" : "data-src-en"); });
+    $("day").textContent = now.getDate();
+    $("month").textContent = zh ? MONTH_ZH[now.getMonth()] : now.toLocaleDateString("en", { month: "long" });
+    $("week").textContent = zh ? WEEK_ZH[now.getDay()] : now.toLocaleDateString("en", { weekday: "long" });
+    $("monthYear").textContent = zh ? now.getFullYear() + " 年" : String(now.getFullYear());
+    $("good").textContent = pick(GOOD, 3, dayNo).map(function (p) { return p[i]; }).join(" · ");
+    $("bad").textContent = pick(BAD, 2, dayNo).map(function (p) { return p[i]; }).join(" · ");
+    $("lang").textContent = zh ? "EN" : "中文";
+    $("lang").setAttribute("aria-label", zh ? "Switch to English" : "切換到中文");
+    if (APP_STORE_URL) $("get").textContent = zh ? "下載遊戲" : "Get the game";
+  }
+
+  try { lang = localStorage.getItem("lang") || ((navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en"); } catch (e) {}
+  var asked = /[?&]lang=(en|zh)\b/.exec(location.search); // a link can pick the language: ?lang=zh
+  if (asked) lang = asked[1];
+  $("lang").addEventListener("click", function () {
+    lang = lang === "zh" ? "en" : "zh";
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+    render();
+  });
+
+  if (APP_STORE_URL) {
+    var a = document.createElement("a"), old = $("get");
+    a.className = "get"; a.id = "get"; a.href = APP_STORE_URL;
+    a.setAttribute("data-en", "Get the game"); a.setAttribute("data-zh", "下載遊戲");
+    old.parentNode.replaceChild(a, old); nodes[nodes.indexOf(old)] = a;
+  }
+  render();
+
+  // Saving: on phones the share sheet (save to Photos, send to a chat); elsewhere the link downloads the file.
+  document.querySelectorAll(".sticker-save a").forEach(function (link) {
+    link.addEventListener("click", function (ev) {
+      var card = link.closest(".sticker");
+      card.classList.remove("torn"); void card.offsetWidth; card.classList.add("torn");
+      if (!navigator.canShare || !window.matchMedia("(pointer: coarse)").matches) return;
+      ev.preventDefault();
+      fetch(link.href).then(function (r) { return r.blob(); }).then(function (blob) {
+        var file = new File([blob], link.getAttribute("download"), { type: blob.type });
+        if (!navigator.canShare({ files: [file] })) throw new Error("cannot share files");
+        return navigator.share({ files: [file] });
+      }).catch(function (err) { if (err && err.name !== "AbortError") window.location.href = link.href; });
+    });
+  });
+})();
+</script>
 </body>
 </html>
